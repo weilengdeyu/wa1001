@@ -1,0 +1,949 @@
+2018年10月8日09:03:44
+使用Java理解程序逻辑
+课程大纲
+1.初识Java
+2.单词   英文=====中文
+  关键代码
+  重点内容
+  自己的问题
+3.程序的概念：
+计算机程序：为了让计算机执行某些操作或解决某个问题而编写的一系列有序指令的集合 
+4.JavaSE ：Java Standard Edition Java 标准版
+
+JavaEE ：Java Enterprise Edition Java企业版
+
+5.JDK  java Developer(开发) kit (工具类)
+
+
+6.JDK配置步骤
+   1.双击我的电脑 进入 C盘
+
+   2.进入 Program Files 或者是Program Files(x86)
+
+   3.找到Java 目录
+
+   4.进入JDK的文件夹，不要找JRE，然后进入bin
+   
+   5.在地址栏空白处 单击鼠标 左键 ，然后整个路径背景变成蓝色，呈现出全选状态
+
+   6.在蓝色区域点击鼠标  《右键》，选择复制
+
+   7.对我的电脑点击鼠标右键，属性----》高级系统设置----->环境变量。。。。在下方找Path
+
+   走到最后，加分号，粘贴复制的的内容
+
+
+7.
+
+
+作业
+1.JDK 最新版本是10还是11
+2.JDK的配置步骤
+3.第一个记事本编写Java程序案例步骤手写2遍
+4.预习第一章和第二章
+5.晚上的时候，形成博客
+
+2018年10月9日09:18:57
+1.复习
+  编写一个HelloJava？
+  步骤：1.先在D盘创建一个文本文档，后缀改成Hello.java
+         2.用记事本打开
+		 3.输入相关内容
+		 4.代码完毕后，windows+R，出现一个窗口
+		 5.输入cmd，并且出车，蹦出一个窗口
+		 6.当前路径是C盘，键入D:进入D盘
+		 7.进入D盘后，输入javac Hello.java
+		 8.回车D盘里出现一个Hello.class
+		 9.java Hello 回车，会出现内容
+		 
+	2.JDK的配置步骤
+       1.先到C盘找到JDK的目录
+		2.目录下最终有一个bin的文件夹
+		3.复制文件夹的路径
+		4.我的电脑---属性---高级设置----环境变量
+		5.找到P打头的单词 ，path
+		6.点击编辑，在末尾加个分号，然后将复制的内容粘贴内容，一路确定，直到所有的窗口消失。
+		
+    3.如何进入注册表
+	  1.windows+R，出现一个窗口,输入cmd，然后再弹出一个窗口，输入regedit
+	  2.windows喜欢走注册表，java喜欢走环境变量
+	  
+	4.Java历史
+	  1.sun公司的，被甲骨文(oracle)公司收购了，以74亿美金，logo是咖啡杯子，上面冒着热气。
+	  
+	  2.Java  的创始人 james golsing 詹姆斯·高斯林
+	  
+	  
+	5.Java主要的应用技术  JavaSE(标准版：最核心的)和JavaEE(进行了扩展和补充)
+	JavaSE ：Java Standard Edition
+	JavaEE： Java  Enterprise Edition
+	
+1.无论多么复杂的软件系统，都是从main函数的第一行
+代码开始执行的，所以说，main函数是程序的入口函数
+2.方案一：
+    System.out.println("第一行");
+    System.out.println("第2行");
+	
+	System.out.print("第一行\n");
+    System.out.print("第2行\n");
+	
+	System.out.println("第一行");
+    System.out.print("第2行\n");
+	
+	System.out.print("第一行\n");
+    System.out.println("第2行");
+	
+	System.out.print("第一行\n第2行\n");
+    System.out.print("第3行");
+	
+	System.out.print("第一行\n第2行");
+	System.out.println("");
+	System.out.print("第3行");
+	
+	  System.out.print("第一行");
+      System.out.print("\n第2行");
+      System.out.print("\n第3行");
+	
+ 2018年10月11日08:41:34
+ 1.包资源管理器
+    导航器
+ 2.Syntax error, insert ";" to complete BlockStatements
+    语法错误：插入一个分号去完成声明块
+Multiple markers at this line
+	- 同时他也是一个开始 cannot be resolved to a variable
+	- Syntax error on token "Invalid Character", invalid 
+	 AssignmentOperator
+	- 放学不是结束 cannot be resolved（解析） to a variable（变量）
+ 3.创建类的快捷键 Ctrl+n
+   删除当前行快捷键 Ctrl+d
+   批量注释多行内容 Ctrl+Shift+/
+   批量取消注释     Ctrl+Shift+\
+   自动补全代码     Alt+/
+4.变量的命名规则
+  两种命名法：
+  1.骆驼命名法  Camel：
+   内容：首字母小写，后续有含义的单词首字母大写
+  eg.stuName stuAge stuAddress userOrder  myBag  yourGirlFriend
+  
+  2.帕斯卡      Pascal
+  内容：首字母大写，后续有含义的单词首字母大写
+  
+  
+   下午：
+   1.写作业
+     电脑+手写（2遍刘鑫）
+	 
+   2.3点10分
+     第二章预习是完整的
+	 
+   3.周记一篇
+   
+   晚上：超级演说家定人员
+         博客
+	 
+2.变量，数据类型和运算符
+    赋值运算符=
+	使用操作符将 操作数  连接起来的式子就是表达式
+			int result=5.0/3;
+
+	算术运算符+ - * / %
+	自动类型转换
+	规则1：在一个表达式中，如果有一个操作是double，那么整个表达式自动提升成double
+	规则2：类型相容，目标类型>源类型
+	
+	Type mismatch: cannot convert from int to char
+	类型不匹配：
+	
+	强制类型转换
+	关系运算符
+	boolean类型
+	
+	----Scanner类
+	++ --
+	明天考核笔试+机试
+	下周一PPT选拔对抗，主题《我的家乡》
+-------------------------------------------------------------------------------------------
+	2018年10月15日09:31:48
+	1.一道例题
+	
+	
+	2.++在前含义：先让num自身+1，然后参与后续运算
+	
+	  ++在后的含义：先取出num的值参与运算，然后自身+1
+	  
+	2018年10月16日08:11:41
+	1.常用的逻辑运算符及其作用？
+     解析：!:非 取反（）
+	       ||:或   A||B  shift+|()
+		   &&:与（并且）A&&B
+		   shift+7 :&
+	2.请写出判断分数大于60并且分数小于100的表达式
+	  if(score>=60&& score<=100){
+	  }
+	3.多重if选择结构的  执行流程    是怎样的？
+      解析：判断条件是否成立，成立的话，执行{}，不成立，看后面的条件是否成立，后面的如果成立就执行。
+	
+	4.如何从键盘接收用户录入的各种类型的数据
+	 我想接收一个整数
+	 //从苏宁易购购买了一台扫描仪
+	 Scanner input=new Scanner(System.in);
+	 int num=input.nextInt();
+	 
+	 double number=input.nextDouble();
+
+	 char sex=input.next().charAt(0);
+	 
+	 String wordss=input.next();
+3.选择结构（一）
+2018年10月17日08:47:19
+1.选择结构
+  if选择结构，条件判断后，再进行处理的一种语法，一般都是先用if(条件){
+     //条件为真，执行我
+  }else{
+     //条件为假，进入这里
+  }
+2.多重if语法
+  
+
+3.嵌套if
+  if(条件1){
+          代码1
+    if(条件2){
+      //code2
+    }
+  }else{
+  
+  }
+   if(条件1&&条件2){
+    
+    
+    }
+  
+4.char类型可以看成是比int范围小的整型。
+int result=12+'好';
+---------------------------------
+2018年10月18日08:50:50
+1.四个  switch
+      case
+      default
+      break
+      
+2.
+  int num=3;;
+switch(num){
+   case 1:
+     System.out.print("1");
+   break;
+   case 2:
+     System.out.print("2");
+   break;
+   case 3:
+     System.out.print("3");
+   break;
+   default:
+     System.out.print("该功能尚未开通");
+   break;
+}     
+
+3.switch后面的（）里面变量的类型 只能是int/char 类型
+boolean
+double
+String
+4.选择结构（二）
+2018年10月19日09:10:29
+1.四个关键词
+  switch
+  case
+  default
+  break
+2.switch(变量类型：：int/char/String/byte/){
+    case 变量值:
+    break;
+    case 变量值:
+    break;
+    case 变量值:
+    break;
+    case 变量值:
+    break;
+    default:
+    break;
+ }
+ 3.switch注意事项
+	 1.case后必加break，防止case穿透。
+	 2.case后面的变量必须各不相同
+	 3.default块顺序可以变动，但要注意其执行顺序。通常，default块放在末尾，也可以省略
+	 4.switch后面小括号中表达式的值必须是整型或字符型。
+
+ 
+
+Exception in thread "main" java.util.InputMismatchException
+翻译：异常              线程          主要的，关键的（main函数）输入不匹配
+
+5.循环结构（一）
+1.循环的概念
+  循环：就是重复做一件事情的过程，并且这件事情有结束的条件。
+2.while循环
+  while(){
+      
+  }
+  四个要素：（1）初始变量  （2）循环条件  （3）循环体   （4）改变迭代变量的值
+  
+3.于洋100遍好好学习
+  int num=1;
+  while(num<=100){
+    syso("第"+num+"次打印好好学习");
+    num++;
+  }
+4.断点调试
+   1.设置断点
+   2.点击昆虫进行Debug
+   3.点击F6进行单步调试
+   4.观察变量的值
+   5.更改不正确的code，重新执行
+   
+5.当控制台显示数据不完整的时候，我们可以点击window---->preference--->输入run---->console,取消
+limit前复选框的选中状态，点击ok即可。
+
+2018年10月22日07:45:08
+1.培训人数案例
+2.上机练习3说明
+3.之前内容复习
+4.断点调试
+5.do-while循环
+6.for循环
+
+6.循环结构（二）
+2018年10月23日09:33:48
+
+1.三种循环结构的断点跟踪
+2.整数反转
+3.for循环加法表
+4.for循环常见问题
+5.continue和break
+continue含义是结束本次循环，继续下一次循环，如果在continue之后还有其他的语句，那么他们都不具备执行权 ，代码的执行
+流程会直接跳转到迭代变量改变的地方。
+break的含义是直结束整合for循环。什么是结束循环？就是跳转到for循环右}之后的一行code
+2018年10月25日09:41
+1.三种结构
+  int num=1;
+  int sum=0;
+  while(num<=100){
+     sum=sum+num;
+     num++;
+  }
+  
+   int num=1;
+   int sum=0;
+  do{
+    sum=sum+num;
+    num++;
+  }while(num<=100);
+  
+  for( int num=1; num<=100;i++){
+      sum=sum+num;
+  }
+--------------------------------------------
+2.经典用法
+  程序三种结构
+  1.顺序结构
+  2.选择结构
+  3.循环结构
+综合题目
+
+1.通常什么情况下使用数组？
+解析 用于将相同数据类型的数据，存储起来。
+
+如何定义一个int数组？
+解析：
+int[] nums=new int[3];
+
+怎样引用一个数组中的元素？
+解析:nums[1]
+
+解析:如何为数组元素赋值？
+解析：nums[2]=10;
+
+ 
+如何获得数组中指定位置的元素值？
+int num= nums[2];
+
+
+7.数组
+1.数组 是一个变量，相同数据类型的数据存储在内存。
+
+2.数组的两种定义方式
+  int[] nums=new int[]{1,2,3};
+  int[] nums={1,2,3};
+  
+  方式二
+  int[] numbers=new int[5];
+  numbers[0]=1;
+  
+
+8.循环进阶
+1.什么是二重循环？
+解析：就是一个循环体内又包括另外一个完整的循环结构
+2.二重循环的执行顺序是什么？
+解析：分层内外两层，外层循环执行一次，内层循环执行一遍。
+3.内循环中的break可以终止二重循环的执行吗？
+解析：不可以，只可以结束内层循环自身
+4.请绘制出二重循环结构的流程图
+
+Duplicate local variable i
+重复的               本地      变量       i
+2018年11月2日08:38:16
+------------------------------------------------------
+1.二重循环
+ 二重循环打印图形的本质就是寻找内层循环结束的条件
+eg：j<=i
+    j<=2*i-1
+    j<7-i
+    j<7-2*i
+    
+9.类和对象
+1,类和对象的概念
+类：专门  封装    属 性和  行为的容器。
+        具有   相同属性    和    行为的    一堆事物的统称。
+        
+对象：现实世界中，看得见并且摸得着某一个具体的个体。
+
+类和对象的关系：一个类可以有N个对象， 一个对象只能属于某一个类型。
+            类是对象的模板，对象是类的实例。
+
+
+2、类如何定义
+public class FaMuLei{
+	String name;
+	int age;
+	public void getSomething(){
+	   System.out.println("邓超永久退出娱乐圈，为了小孩儿");
+	}
+}
+
+FaMuLei obj1=new FaMuLei();
+obj1.name="迪丽热巴";
+obj1.age=20;
+obj1.getSomething();
+
+
+FaMuLei obj2=new FaMuLei();
+obj2.name="迪丽热巴";
+obj2.age=20;
+obj2.getSomething();
+3.有了类之后，对象怎么创建
+4.有了对象，如何调度属性和方法
+10.无参方法
+public void getSome(){
+
+}
+
+11.带参方法
+public class Book{
+   public int bookId;
+   public String bookName; "你是人间的四月天"  "艰难的抉择0“
+   public  String bookAuthor;
+   public double bookPrice;
+}
+-----实例化 或者  创建一个图书对象
+Book b1=new Book();
+b1.bookId=1;
+b1.bookName="abc";
+b1.bookAuthor="林徽因-----梁思成------金庸-----徐志摩---------";
+b1.bookPrice=1.23;
+
+2.四个步骤
+public class Student{
+
+   public String run(){
+    sout("我能跑，你能吗？");
+    return "呵呵哒，我能呀！";
+   }
+    public void eatSomething(){
+      run();
+   }
+   
+}
+!>创建一个学对象
+Student stu=new Student();
+
+2>调度方法
+stu.run();  对象名.方法名()
+3》接收返回值
+String words=stu.run();
+4>打印输出
+sout(words);
+方法调度有两种情况，
+情况一：方法A和方法B在同一个类中，直接使用方法名称即可调度另一个方法
+情况二：方法A和方法B分散在两个类中（学生类和main函数所在的类，），需要先创建对象，然后使用对象名.方法名()调度
+
+---------------------------------------------------------------------------------
+课程复习：
+1》
+  1.
+  Java  一门 语言  作者  Games  Gosling 詹姆斯·高斯林 
+  Java  1995年  23
+  Java  跨平台  一次编写，到处运行
+  
+  
+  2.我的第一个java程序
+  public class Hello{
+     //四个要素：访问修饰符 public
+                                   修饰符：static
+                                 返回值类型：void
+             小括号中的东西：String[] args
+     public static void main(String[] abc){
+         System.out.print("Hello\n");
+         System.out.print("\nHello");
+     }
+  }
+  3.JDK Java Developement Kit java开发工具包：
+    1.找到JDK的bin目录，然后复制
+    
+    2.我的电脑----》右键属性----》高级 ----》环境变量------>在下半部分，找到path、点击编辑，加入;和剪切板中内容
+    
+    3.一路确定，直到所有窗口消失
+    
+    4.通过DOS cmd ------>javac 查看结果
+    
+  4.  编译命令 ：javac Hello.java
+       编译在将人可以读懂的代码(.java)编程机器（JVM：Java虚拟机）能读懂的代码（.class）。
+                运行命令  java Hello
+                运行：将硬盘上一个后缀是.class的文件加载到内存，并进行解析。
+2》变量，数据类型，运算符
+  1.变量：一个会变化的量。内存上的一块空间
+  
+  2.四种常用类型
+    int
+    double
+    char  ' '
+    String "张三"
+  3.变量定义两种方式
+   方式一：int num=3;
+   
+   
+   方式二： int num;
+        num=3;
+    
+  double number=1.23:   
+  
+  char sex='男';
+  
+  String name="小杨呵呵哒";
+  
+  所有运算符
+  1.赋值运算符  =
+  
+  2.算术运算符 + - * / %
+  
+  3.关系运算符  > <   >=  <= !=  ==
+  
+  4.逻辑运算符  && (逻辑与) ||(逻辑或)
+  
+  5.自增和自减     ++  -- 
+3》选择结构：
+   普通if
+   
+   boolean flag=false;
+   
+   if(条件1=true){
+            代码块1
+   }
+      代码2
+      
+ if-else
+ if(条件假){
+   code1
+ }else{
+   code2
+ }
+ 
+ --多重if  条件范围一定从大到小
+ if(条件){
+  
+ }else if(){
+ 
+ }else if(){
+ 
+ }else if(){
+ 
+ }else{
+ 
+ }
+ 
+ 
+ --嵌套if
+ if(条件1){
+   
+   if(条件2){
+   
+   }else{
+    
+   }
+ }else{
+   
+ }
+ 
+ 
+
+4》分支结构 （二）
+ switch
+ int num=1;
+ int/char/String（JDK 1.7 以上 包含1.7 Java11）
+ switch(num){
+   case 1:
+     sout(1);
+   break;
+   case 2:
+     sout(2);
+   break;
+   case 3:
+     sout(3);
+   break;
+   default:
+     sout("都不满足");
+   break;
+ }
+ 
+注意事项：
+1.见到case就要有break，防止case穿透
+
+2.每个case后跟的常量值不能重复
+
+3.switch必须是表达式
+
+4.default的顺序会影响输出结果
+
+5》循环结构
+  循环结构四要素：
+  1.初始值（可以是字符串）
+  2.循环条件
+  3.循环体
+  4.改变迭代变量的值
+ 
+int num=1;
+int sum=0;
+while(num<=100){
+   sum+=num;
+   num++;
+}
+
+//偶数和  1到100之间
+int num=0;
+int sum=0;
+while(num<=100){
+   sum+=num;
+   num+=2;
+}
+int num=1;
+int sum=0;
+while(num<=100){
+   if(num%2==0){
+     sum+=num;
+   }
+   num++;
+}
+do{
+  
+}while(条件);
+
+执行机制：先跑一遍，然后判断，
+条件为真，就行跑，
+为假，结束整个循环。
+
+
+6》
+for(int i=1;i<=100;i++){
+   //循环体
+   
+}
+
+public static void main(String[] args) {
+		int i ;
+		for (i= 1; i <=5; i++) {
+			if(i==-1){
+				break;
+			}
+		}
+		System.out.println(i);
+}
+8>数组：变量 ，数组是一种特殊变量
+  数组：数组是内存上一连串空间，而且数组中每个元素类型都得一致。
+ 三种
+ 第一种：
+ int[] nums={1,2};  //同一行 
+
+ 第二种：先声明  再赋值
+  int[] nums=new int[3];
+  nums[0]=1;
+  nums[1]=2;
+  nums[2]=1;
+
+第三种，循环赋值
+  int[] nums=new int[3];
+   //1.索要新空间
+   //2.创建对象
+  Scanner input=new Scanner(System.in);
+  for(int i=0;i<nums.length;i++){
+     nums[i]=input.nextInt();
+  }
+
+//数组越界   下标越界     数组下标从开始   ，到 数组长度(nums.length-1)结束
+ArrayIndexOutOfBoundsException 
+ int[] nums={12,33,44,55,100};
+ int max=nums[0];
+ for(int i=1;i<nums.length;i++){
+    if(nums[i]>max){
+      max=nums[i];
+    }
+ }
+ sout(max);
+ 
+  int[] nums={12,33,44,55,66};
+	   int insertNum=45;
+	   //1.定义一个新数组
+	   int[] newNums=new int[nums.length+1];
+	   //2.赋值
+	   for (int i = 0; i < nums.length; i++) {
+		   newNums[i]=nums[i];
+	   }
+	   //3.找位置
+	   int index=newNums.length-1;
+	   for (int i = 0; i < newNums.length; i++) {
+		  if(newNums[i]>insertNum){
+			  index=i;
+			  break;
+		  }
+	   }
+	   
+	   //4.元素后移，倒着移
+	   for (int i = newNums.length-1; i >index ; i--) {
+		    newNums[i]=newNums[i-1];
+	   }
+	   
+	   //5.重新赋值
+	   newNums[index]=insertNum;
+	   for (int i = 0; i < newNums.length; i++) {
+		  System.out.println(newNums[i]);
+	   }
+
+11.复习
+1.类和对象的概念以及关系
+2.如何自己定制一个类  （属性     方法）
+3.属性如何赋值，方法如何调度
+2018年11月9日09:31:55
+1.案例一：School案例
+2.案例二：游客门票
+在自定义类中，加入了判定的语句
+自定义也是一种数据类型，他和我们之前所说的 int double 
+
+
+
+游戏（Game）：综合调度玩家和电脑（）
+角色：玩家（Person）
+角色：电脑（Computer）
+
+测试类：
+T1
+
+Game game=new Game();
+game.startGame();
+开发步骤：
+
+  1.定义一个Person类
+    public class Person{
+      public String name;//玩家的名称
+      public int score;//玩家的得分
+      
+    }
+    
+    
+  2.定义一个Computer类
+    public class Computer{
+      public String computerName;
+      public int computerScore;
+    }
+
+  3.定义一个Game游戏类
+  public class Game{
+      public void startGame(){
+        
+      }
+  }
+
+2018年11月12日11:58:03
+1.带参方法
+榨汁机 ZhaZhiJi
+ fruit （苹果 ，梨  ，桃）
+
+2018年11月14日08:42:23
+1.原型                               形参1         形参2
+public void say(String name,int age){
+  
+}
+准则：
+Student stu=new Student();
+
+stu.say("张三",12); //实际参数
+三个一致：顺序一致，类型一致，个数一致。
+Tip：实参和形参的区分
+
+
+2.案例：
+我现在有一个数组，数组长度为5，需要用该数组保存5位学生姓名。
+
+1.添加功能（方法），能通过一个带参数方法 ，（方法参数为学生姓名） ，将姓名 添加到数组中
+
+2.范围查询，我提供学生姓名，以及查找的开始位置，结束位置，看一看被检索的姓名是否存在。
+
+3.修改
+现在我调度2次添加方法，给数组添加2个学生，我将其中一个学生的姓名更改成“李小龙”
+
+4.数组作为方法参数
+
+5.对象作为方法参数
+
+6.包结构
+
+The field Book.bookName is not visible
+属性  Book.bookName  是不可见的
+12.字符串
+1.
+public class Student{
+  public String name;
+  public int age;
+  public void test(){
+    
+  } 
+  public void test(String name){
+    
+  }
+  public int test3(int num){
+     return num+1;
+  }
+  public void test4(String[] names){
+  
+  }
+}
+
+public class T1{
+  public static void main(String[] args){
+    Student stu=new Student();
+    stu.test();
+    stu.test("张三");
+    int result=stu.test3(2);
+    String[] names={"第一个值","第二个值"};
+    stu.test4(names);
+  }
+}
+2.声明包
+  package cn.happy;
+ 
+导入包
+  import java.util.Scanner;
+  import java.util.*;
+  
+JDK 
+API文档：
+Eclipse Java
+
+1.String的方法
+  1.1 length(): int 字符串长度
+  
+  1.2 equals(): boolean  对比的是两个字符串的内容（里面装的东西）
+  
+  1.3 equalsIgnoreCase() ：  boolean  在忽略大小写的情况下 ，对比的是两个字符串的内容
+      toUpperCase()
+      toLowerCase()
+      
+2.10进制
+	  0
+	  1
+	  2
+	  3
+	  4
+	  5
+	  6
+	  7
+	  8
+	  9
+  2进制
+	  0
+	  1
+  8进制
+      0
+	  1
+	  2
+	  3
+	  4
+	  5
+	  6
+	  7
+  16进制
+      0
+	  1
+	  2
+	  3
+	  4
+	  5
+	  6
+	  7
+	  8
+	  9
+	  A 10
+	  B 11
+	  C
+	  D
+	  E
+	  F
+  0x
+  
+  2018年11月21日08:49:44
+  1.字符串
+     长度：length()   "abc"
+  比较两个字符串内容是否相等：equals()
+  忽略大小写:equalsIngoreCase()  eg.  name.equals(name2)
+ 转成大写 :upper()
+ 小写：lower()
+  
+ 2.连接方法 concat
+ 
+ 
+ 3.字符串提取的方法
+    indexOf()
+    substring()
+    
+ 4.字符串切割的方法
+   split()
+   
+ 5.StringBuffer类
+     append()
+     insert()
+2018年11月23日08:36:38
+1.  return  the index of the first occurrence of the specified substring,
+     starting at the specified index,
+       or {@code -1} if there is no such occurrence.    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
